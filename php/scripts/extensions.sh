@@ -88,6 +88,8 @@ if [[ $PHP_VERSION == "7.2" ]]; then
     && docker-php-ext-install memcached \
     && docker-php-ext-enable memcached \
     && docker-php-source delete \
+    
+  docker-php-ext-install sockets \
 
   pecl channel-update pecl.php.net \
     && pecl install amqp redis apcu mongodb imagick xdebug \
